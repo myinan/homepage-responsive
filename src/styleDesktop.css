@@ -11,8 +11,8 @@
 :root {
   --main-bg: #f1f5f9;
   --accent-bg: #0891b2;
-  --main-header-font: #0f172a;
-  --main-p-font: #475569;
+  --main-heading-font: #0f172a;
+  --main-paraf-font: #373a3e;
 }
 
 * {
@@ -33,11 +33,12 @@ h6 {
 
 p {
   font-family: robotoMedium;
+  color: var(--main-paraf-font);
 }
 
 body {
   display: grid;
-  grid-template-rows: 1fr 2fr 1fr;
+  grid-template-rows: repeat(3, min-content);
 }
 
 header {
@@ -46,10 +47,26 @@ header {
   align-items: center;
   padding: 3% 3%;
   background: linear-gradient(
-    to bottom left,
+    to bottom right,
     var(--accent-bg) 49.92%,
     var(--main-bg) 50.08%
   );
+}
+
+header .image-and-name {
+  position: relative;
+}
+
+header .image-and-name h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, +210%);
+  width: max-content;
+  background-color: transparent;
+  font-size: 3.5rem;
+  color: var(--main-bg);
+  cursor: default;
 }
 
 header img {
@@ -69,12 +86,11 @@ header .aboutme-container {
 
 header .aboutme-container h2 {
   font-size: 40px;
-  color: var(--main-header-font);
+  color: var(--main-heading-font);
 }
 
 header .aboutme-container p {
   font-size: 25px;
-  color: var(--main-p-font);
 }
 
 header .header-links-container {
@@ -93,10 +109,150 @@ header .header-links-container svg {
   height: 40px;
 }
 
-main {
-  background-color: rgb(188, 189, 189);
+main h1 {
+  font-size: 45px;
+  padding: 8rem 0 2rem 8rem;
+}
+
+main .projects-grid {
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  justify-items: center;
+  padding: 0 4rem 4rem 4rem;
+  cursor: default;
+}
+
+main .project-container {
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.23);
+  transition:
+    transform 300ms linear,
+    box-shadow 300ms linear;
+}
+
+main .project-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.75);
+}
+
+main .project-container h2 {
+  font-size: 60px;
+  padding: 3.5rem;
+}
+
+main .project-container:nth-child(1) h2 {
+  background-color: #ef4444;
+}
+
+main .project-container:nth-child(2) h2 {
+  background-color: #a855f7;
+}
+
+main .project-container:nth-child(3) h2 {
+  background-color: #10b981;
+}
+
+main .project-container:nth-child(4) h2 {
+  background-color: #ec4899;
+}
+
+main .project-container:nth-child(5) h2 {
+  background-color: #f97316;
+}
+
+main .project-container:nth-child(6) h2 {
+  background-color: #3b82f6;
+}
+
+main .project-container .project-name-links {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0px 2rem;
+}
+
+main .project-container .project-name-links p {
+  font-size: 35px;
+  margin-right: auto;
+}
+
+main .project-container .project-name-links a {
+  border: none;
+  cursor: pointer;
+}
+
+main .project-container .project-name-links svg {
+  width: 35px;
+  height: 35px;
+}
+
+main .project-container > p {
+  font-size: 22px;
+  margin-bottom: 4rem;
+  padding: 0px 2rem;
 }
 
 footer {
-  background-color: brown;
+  background-color: var(--accent-bg);
+  display: flex;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 4rem;
+}
+
+footer img {
+  box-shadow: 0px 0px 17px 3px rgba(0, 0, 0, 0.23);
+}
+
+footer .contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--accent-bg);
+  height: 400px;
+}
+
+footer .contact-container > * {
+  background-color: var(--accent-bg);
+  color: var(--main-bg);
+}
+
+footer .contact-container h1 {
+  font-size: 40px;
+}
+
+footer .contact-container p {
+  font-size: 25px;
+  background-color: var(--accent-bg);
+}
+
+footer .contact-container p svg {
+  width: 40px;
+  height: 40px;
+  background-color: var(--accent-bg);
+}
+
+footer .contact-container #phone,
+footer .contact-container #email {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+footer .contact-container .footer-links-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer .contact-container .footer-links-container * {
+  background-color: var(--accent-bg);
+}
+
+footer .contact-container .footer-links-container svg {
+  width: 50px;
+  height: 50px;
 }
