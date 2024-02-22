@@ -36,4 +36,12 @@
   header .header-links-container a {
     display: none;
   }
+
+  main .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  }
+
+  footer img {
+    width: 400px;
+  }
 }
