@@ -1,0 +1,39 @@
+@media (max-width: 1200px) {
+  header {
+    padding: 10% 3% 3% 3%;
+  }
+
+  header .image-and-name {
+    display: none;
+  }
+
+  header .aboutme-container {
+    width: 60%;
+    padding: 70px 35px;
+    display: block; /* remove "display:flex" */
+  }
+
+  header .aboutme-container .photo-tablet {
+    display: block;
+    float: inline-start;
+    margin: -155px 30px 10px -80px;
+  }
+
+  header .aboutme-container .name-tablet {
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    background-color: transparent;
+    color: var(--main-bg);
+    font-size: 2.5rem;
+  }
+
+  header .aboutme-container h2 {
+    margin-bottom: 1rem;
+  }
+
+  header .header-links-container a {
+    display: none;
+  }
+}

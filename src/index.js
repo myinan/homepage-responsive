@@ -1,1 +1,2 @@
 import "./styleDesktop";
+import "./styleTablet";

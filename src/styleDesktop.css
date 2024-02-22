@@ -57,7 +57,12 @@ header .image-and-name {
   position: relative;
 }
 
-header .image-and-name h1 {
+header .image-and-name .photo-desktop {
+  box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.29);
+  z-index: 2;
+}
+
+header .image-and-name .name-desktop {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -69,11 +74,6 @@ header .image-and-name h1 {
   cursor: default;
 }
 
-header img {
-  box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.29);
-  z-index: 2;
-}
-
 header .aboutme-container {
   width: 40%;
   height: min-content;
@@ -82,6 +82,15 @@ header .aboutme-container {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
+}
+
+header .aboutme-container .photo-tablet {
+  display: none;
+}
+
+header .aboutme-container .name-tablet {
+  display: none;
 }
 
 header .aboutme-container h2 {
