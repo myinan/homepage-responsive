@@ -33,7 +33,7 @@
     margin-bottom: 1rem;
   }
 
-  header .header-links-container a {
+  header .header-links-container {
     display: none;
   }
 

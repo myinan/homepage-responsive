@@ -1,0 +1,76 @@
+@media (max-width: 700px) {
+  header {
+    flex-direction: column;
+    padding: 0;
+    background: none;
+    background-color: var(--accent-bg);
+  }
+
+  header .image-and-name {
+    display: block;
+    margin: 3rem 0rem;
+  }
+
+  header .image-and-name .photo-desktop-mobile {
+    box-shadow: 0px 0px 17px 1px rgba(0, 0, 0, 0.75);
+  }
+
+  header .aboutme-container {
+    display: flex;
+    flex-direction: column;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  header .aboutme-container .photo-tablet {
+    display: none;
+  }
+
+  header .aboutme-container .name-tablet {
+    display: none;
+  }
+
+  header .aboutme-container h2 {
+    align-self: center;
+  }
+
+  header .header-links-container {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  main h1 {
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    padding: 2rem 0;
+  }
+
+  footer {
+    gap: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  footer .contact-container {
+    width: 80%;
+    height: auto;
+    align-self: center;
+    gap: 1.5rem;
+    padding: 3rem 0rem;
+  }
+
+  footer .contact-container h1:first-child {
+    align-self: center;
+  }
+
+  footer .contact-container .footer-links-container:last-child {
+    align-self: center;
+  }
+
+  footer img {
+    width: 100%;
+  }
+}

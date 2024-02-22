@@ -57,12 +57,12 @@ header .image-and-name {
   position: relative;
 }
 
-header .image-and-name .photo-desktop {
+header .image-and-name .photo-desktop-mobile {
   box-shadow: 0px 0px 17px 6px rgba(0, 0, 0, 0.29);
   z-index: 2;
 }
 
-header .image-and-name .name-desktop {
+header .image-and-name .name-desktop-mobile {
   position: absolute;
   top: 50%;
   left: 50%;
